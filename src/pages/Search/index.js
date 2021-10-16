@@ -26,7 +26,7 @@ function Search() {
             if (isActive) {
                 setCidade([response.data])
 
-                //console.log(response.data)
+                console.log(response.data)
 
             }
 
