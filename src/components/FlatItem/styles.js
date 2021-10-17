@@ -4,13 +4,20 @@ export const Container = styled.View`
     padding: 14px;  
 `;
 
+export const TitleQuality = styled.Text`
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+`;
+
 export const ItensContainer = styled.TouchableOpacity`
     background-color: #191919;
     width: 100%;
     height: 200px;
     border-radius: 10px;
     flex-direction: row;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 `
 export const BackGLeft = styled.View`
     width: 1.4%;
@@ -18,7 +25,9 @@ export const BackGLeft = styled.View`
     height: 200px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-`
+ 
+`;
+
 export const Itens = styled.View`
     width: 98.6%;
     align-items: center;
@@ -37,4 +46,6 @@ export const NumberAr = styled.Text`
     font-size: 28px;
   
 `;
+
+
 
