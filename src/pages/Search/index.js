@@ -14,6 +14,7 @@ function Search() {
 
     useEffect(() => {
         let isActive = true;
+        const ac = new AbortController();
 
         async function getLocale() {
             const response = await api.get("/current.json", {
@@ -26,10 +27,8 @@ function Search() {
             if (isActive) {
                 setCidade([response.data])
 
-                console.log(response.data)
-
+                // console.log(response.data)
             }
-
         }
 
         if (isActive) {
@@ -38,6 +37,7 @@ function Search() {
 
         return () => {
             isActive = false;
+            ac.abort();
         }
 
 

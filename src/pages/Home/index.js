@@ -10,7 +10,6 @@ import {
 } from './styles'
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-
 import Header from '../../components/Header'
 import Search from "../../pages/Search";
 
@@ -30,6 +29,7 @@ function Home() {
         })
 
         setInput('')
+
     }
 
     return (

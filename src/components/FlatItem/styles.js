@@ -2,50 +2,53 @@ import styled from 'styled-components/native'
 
 export const Container = styled.View`
     padding: 14px;  
+    align-items: center; 
+    margin-top: 20px;
 `;
 
-export const TitleQuality = styled.Text`
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-`;
-
-export const ItensContainer = styled.TouchableOpacity`
-    background-color: #191919;
+export const AreaButton = styled.TouchableOpacity`
+    height: 350px;
     width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    flex-direction: row;
-    margin-bottom: 15px;
-`
-export const BackGLeft = styled.View`
-    width: 1.4%;
-    background-color: #16db65;
-    height: 200px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
- 
+    align-items: center;
+    justify-content: center;
+
 `;
 
-export const Itens = styled.View`
-    width: 98.6%;
+export const AreaCircle = styled.View`
+    background-color: #191919;
+    height: 300px;
+    width: 80%;
+    border-radius: 300px;
     align-items: center;
     justify-content: space-around;
+    border: 2px solid #16db65;
+    z-index: 9;
 `;
 
-export const TitleLocation = styled.Text`
-    margin-top: 5px;
+export const Locations = styled.Text`
     font-size: 22px;
-    color: #fff;
     font-weight: bold;
+    color: #fff;
 `;
 
-export const NumberAr = styled.Text`
-    color:#16db65;
-    font-size: 28px;
-  
+export const NumberIndice = styled.Text`
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
 `;
 
+export const AreaIcon = styled.View`
+    margin-top: -30px;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 25px;
+    z-index: 9;
 
+`;
 
+export const Status = styled.View`
+    margin-top: 50px;
+    width: 100%;
+
+`;

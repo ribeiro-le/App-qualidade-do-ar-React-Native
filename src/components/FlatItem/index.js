@@ -1,16 +1,17 @@
 import React from "react";
 import {
     Container,
-    ItensContainer,
-    BackGLeft,
-    Itens,
-    TitleLocation,
-    NumberAr,
-    TitleQuality,
+    AreaButton,
+    AreaCircle,
+    Locations,
+    NumberIndice,
+    AreaIcon,
+    Status
 
 } from './styles'
 
-import { View, Text } from 'react-native'
+import { View, Text } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 
 function FlatItem({ data }) {
 
@@ -152,29 +153,31 @@ function FlatItem({ data }) {
 
     return (
         <Container>
-            <TitleQuality>Qualidade do ar</TitleQuality>
 
-            <ItensContainer>
-                <BackGLeft></BackGLeft>
+            <AreaButton>
+                <AreaCircle>
+                    <Locations>
+                        {data.location.name}
+                    </Locations>
 
-                <Itens>
-                    <TitleLocation>{data.location.name}</TitleLocation>
-                    <TitleLocation>{data.location.region}, {data.location.country}</TitleLocation>
+                    <Locations>
+                        {data.location.region}, {data.location.country}
+                    </Locations>
 
-                    <NumberAr>{
-                        data.current.air_quality.o3 > data.current.air_quality.pm10
-                            ?
-                            `${data.current.air_quality.o3.toFixed(0)}`
-                            :
-                            `${data.current.air_quality.pm10.toFixed(0)}`
-                    }</NumberAr>
+                    <NumberIndice>{data.current.air_quality.o3.toFixed(0)}</NumberIndice>
+                </AreaCircle>
 
-                </Itens>
-            </ItensContainer>
+                <AreaIcon>
+                    <Feather name="wind" size={50} color="black"></Feather>
+                </AreaIcon>
+            </AreaButton>
 
-            {comparar()}
-
+            <Status>
+                {comparar()}
+            </Status>
         </Container>
     );
 }
+
+
 export default FlatItem;
