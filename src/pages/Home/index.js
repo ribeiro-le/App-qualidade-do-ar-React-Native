@@ -24,6 +24,7 @@ function Home() {
             return;
         }
 
+
         navigation.navigate('Search', {
             name: input
         })

@@ -9,25 +9,32 @@ import FlatItem from '../../components/FlatItem';
 
 function Search() {
     const route = useRoute();
-    const [cidade, setCidade] = useState([]);
+    const [city, setCity] = useState([]);
 
 
     useEffect(() => {
         let isActive = true;
         const ac = new AbortController();
 
-        async function getLocale() {
-            const response = await api.get("/current.json", {
-                params: {
-                    q: route?.params?.name,
-                    key: key,
-                    aqi: 'yes'
-                }
-            })
-            if (isActive) {
-                setCidade([response.data])
 
-                // console.log(response.data)
+        async function getLocale() {
+            try {
+                const response = await api.get("/current.json", {
+                    params: {
+                        q: route?.params?.name,
+                        key: key,
+                        aqi: 'yes',
+                        lang: 'pt-BR'
+                    }
+                })
+                if (isActive) {
+                    setCity([response.data])
+
+                    //console.log(response.data)
+                }
+            }
+            catch (err) {
+                alert('Local não encontrado, tente novamente!', err)
             }
         }
 
@@ -40,15 +47,13 @@ function Search() {
             ac.abort();
         }
 
-
     }, [])
-
 
 
     return (
         <Container>
             <ListCity
-                data={cidade}
+                data={city}
                 showsVerticalScrollIndicator={false}
                 keyExtractor={(item) => String(item.id)}
                 renderItem={({ item }) => <FlatItem data={item} />}

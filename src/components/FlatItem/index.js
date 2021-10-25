@@ -12,13 +12,14 @@ import {
 
 import { View, Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import styled from "styled-components";
 
 function FlatItem({ data }) {
 
     let numberIndex = data.current.air_quality['us-epa-index']
     //console.log(numberIndex)
 
-    const comparar = () => {
+    const stateIndex = () => {
         switch (numberIndex) {
             case 1:
                 return (
@@ -148,14 +149,14 @@ function FlatItem({ data }) {
                 );
         }
     }
-    //console.log(comparar())
-
+    //console.log(stateIndex())
 
     return (
         <Container>
 
             <AreaButton>
-                <AreaCircle>
+                <AreaCircle props={numberIndex}>
+
                     <Locations>
                         {data.location.name}
                     </Locations>
@@ -168,12 +169,12 @@ function FlatItem({ data }) {
                 </AreaCircle>
 
                 <AreaIcon>
-                    <Feather name="wind" size={50} color="black"></Feather>
+                    <Feather name="wind" size={50} color="#fff"></Feather>
                 </AreaIcon>
             </AreaButton>
 
             <Status>
-                {comparar()}
+                {stateIndex()}
             </Status>
         </Container>
     );
