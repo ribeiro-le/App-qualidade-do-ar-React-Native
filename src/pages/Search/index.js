@@ -16,7 +16,6 @@ function Search() {
         let isActive = true;
         const ac = new AbortController();
 
-
         async function getLocale() {
             try {
                 const response = await api.get("/current.json", {
@@ -29,7 +28,6 @@ function Search() {
                 })
                 if (isActive) {
                     setCity([response.data])
-
                     //console.log(response.data)
                 }
             }
@@ -57,7 +55,6 @@ function Search() {
                 showsVerticalScrollIndicator={false}
                 keyExtractor={(item) => String(item.id)}
                 renderItem={({ item }) => <FlatItem data={item} />}
-
             ></ListCity>
         </Container>
     );
