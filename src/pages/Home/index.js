@@ -8,6 +8,7 @@ import {
     SearchInput
 
 } from './styles'
+import { ActivityIndicator } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header'
@@ -17,6 +18,7 @@ function Home() {
 
     const navigation = useNavigation();
     const [input, setInput] = useState('');
+    const [loading, setLoading] = useState(true);
 
     function handleSearch() {
 
@@ -25,13 +27,18 @@ function Home() {
         }
 
 
+
         navigation.navigate('Search', {
             name: input
         })
 
         setInput('')
 
+
+
     }
+
+
 
     return (
 
