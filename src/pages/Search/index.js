@@ -176,19 +176,7 @@ function Search() {
                 <AreaInfo>
                     <ButtonInfo onPress={openModal}>
                         <Ionicons name="information-circle-outline"
-                            size={45} color="#48cae4"></Ionicons>
-                    </ButtonInfo>
-
-                    <ButtonInfo onPress={() => favoriteLocal(
-                        city)}>
-                        {localFavorite ? (
-                            <Ionicons name="bookmark"
-                                size={45} color="#fff"></Ionicons>
-                        ) : (
-                            <Ionicons name="bookmark-outline"
-                                size={45} color="#fff"></Ionicons>
-                        )}
-
+                            size={50} color="#48cae4"></Ionicons>
                     </ButtonInfo>
                 </AreaInfo>
 

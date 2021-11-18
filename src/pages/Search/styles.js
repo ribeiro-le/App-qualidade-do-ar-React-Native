@@ -62,7 +62,7 @@ export const AreaInfo = styled.View`
     height: 50px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0 14px;
 `;
 
