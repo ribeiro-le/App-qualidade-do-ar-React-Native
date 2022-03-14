@@ -30,7 +30,7 @@ function Search() {
     const [loading, setLoading] = useState(true);
     const [number, setNumber] = useState([]);
 
-    const [localFavorite, setLocalFavorite] = useState(false)
+
     const modalizeRef = useRef(null);
 
     const statusText = () => {

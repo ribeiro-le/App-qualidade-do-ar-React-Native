@@ -5,7 +5,7 @@ import {
     Header,
     Viewprincipal,
     Divisor,
-    Circle,
+
     NumberIndice,
     NamePoluent,
     Status,

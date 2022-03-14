@@ -26,19 +26,13 @@ function Home() {
             return;
         }
 
-
-
         navigation.navigate('Search', {
             name: input
         })
 
         setInput('')
 
-
-
     }
-
-
 
     return (
 
@@ -62,7 +56,6 @@ function Home() {
 
                 </SearchInput>
             </SearchContainer>
-
         </Container>
 
     );
