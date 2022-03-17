@@ -46,24 +46,7 @@ function Routes() {
                     )
                 }}
             />
-            <Drawer.Screen
-                name="Places"
-                component={Places}
-                options={{
-                    title: 'Meus Locais',
-                    drawerIcon: ({ focused, size, color }) => (
-                        <MaterialCommunityIcons
-                            name={focused ? 'map-marker' : 'map-marker-outline'}
-                            size={size}
-                            color={color}
-                        >
 
-                        </MaterialCommunityIcons>
-                    )
-                }}
-
-
-            />
         </Drawer.Navigator>
     )
 }
