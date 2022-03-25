@@ -9,7 +9,7 @@ function App() {
   return (
     <NavigationContainer>
       <StatusBar hidden={true} />
-      <Routes />
+      <Routes ssad />
     </NavigationContainer>
   );
 }
