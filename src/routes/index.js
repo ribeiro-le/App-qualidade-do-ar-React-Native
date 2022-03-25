@@ -3,7 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 
 
 import StackRoutes from './stackRoutes.js';
-import Places from '../pages/Places';
+
 
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
